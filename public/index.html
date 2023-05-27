@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="../build/index.js" defer></script>
+        <link rel="stylesheet" href="../build/output.css" />
+        <title>Your Todo</title>
+    </head>
+    <body>
+        <style>
+            input:checked + label > span {
+                transform: scale(1.1);
+                border: 5px solid lightblue;
+            }
+        </style>
+        <div
+            class="absolute grid h-full w-full grid-cols-3 gap-4 bg-gradient-to-t from-indigo-400 to-indigo-200">
+            <div></div>
+            <div>
+                <div
+                    class="shadow-grey-700 mx-auto my-24 w-10/12 rounded-md bg-white bg-gradient-to-t from-gray-200 to-white p-8 shadow-lg">
+                    <h1 class="text-center text-2xl font-bold text-indigo-400">
+                        Your
+                        <span
+                            class="rounded bg-indigo-400 px-2 py-1 text-white">
+                            Todo
+                        </span>
+                    </h1>
+                    <form class="w-full">
+                        <input
+                            type="text"
+                            id="topic"
+                            value=""
+                            placeholder="Topic"
+                            class="my-4 w-full rounded border-2 border-indigo-300 px-2 py-1 text-indigo-900 shadow-sm shadow-indigo-300 focus:shadow-md focus:shadow-indigo-300 focus:outline-0 focus:transition-shadow" />
+                        <br />
+                        <textarea
+                            name=""
+                            id="detail"
+                            rows="2"
+                            class="w-full overflow-hidden rounded border-2 border-indigo-300 px-3 py-2 shadow-sm shadow-indigo-300 focus:shadow-md focus:shadow-indigo-300 focus:outline-0 focus:transition-shadow"></textarea>
+
+                        <div class="">
+                            <p class="mb-2 text-sm text-gray-500">
+                                Note background color :
+                            </p>
+                            <input
+                                type="radio"
+                                name="note_bg_color"
+                                id="white_color"
+                                class="hidden"
+                                value="white"
+                                checked />
+                            <label for="white_color" class="cursor-pointer">
+                                <span
+                                    class="inline-block h-4 w-4 rounded-full border-2 border-blue-400 bg-white"></span>
+                            </label>
+                            <input
+                                type="radio"
+                                name="note_bg_color"
+                                id="yellow_color"
+                                class="hidden"
+                                value="yellow" />
+                            <label for="yellow_color" class="cursor-pointer">
+                                <span
+                                    class="inline-block h-4 w-4 rounded-full bg-yellow-400"></span>
+                            </label>
+                            <input
+                                type="radio"
+                                name="note_bg_color"
+                                id="green_color"
+                                class="hidden"
+                                value="green" />
+                            <label for="green_color" class="cursor-pointer">
+                                <span
+                                    class="inline-block h-4 w-4 rounded-full bg-green-400"></span>
+                            </label>
+                            <input
+                                type="radio"
+                                name="note_bg_color"
+                                id="blue_color"
+                                class="hidden"
+                                value="blue" />
+                            <label for="blue_color" class="cursor-pointer">
+                                <span
+                                    class="inline-block h-4 w-4 rounded-full bg-blue-400"></span>
+                            </label>
+                            <input
+                                type="radio"
+                                name="note_bg_color"
+                                id="pink_color"
+                                class="hidden"
+                                value="pink" />
+                            <label for="pink_color" class="cursor-pointer">
+                                <span
+                                    class="inline-block h-4 w-4 rounded-full bg-pink-400"></span>
+                            </label>
+                            <input
+                                type="radio"
+                                name="note_bg_color"
+                                id="red_color"
+                                class="hidden"
+                                value="red" />
+                            <label for="red_color" class="cursor-pointer">
+                                <span
+                                    class="inline-block h-4 w-4 rounded-full bg-red-400"></span>
+                            </label>
+                        </div>
+                        <button
+                            id="submit"
+                            class="my-3 w-full rounded bg-indigo-400 py-1 text-white shadow-sm shadow-indigo-300 hover:shadow-md hover:shadow-indigo-300 hover:transition-shadow">
+                            Submit
+                        </button>
+                    </form>
+                </div>
+                <div id="allTodos"></div>
+            </div>
+        </div>
+    </body>
+</html>
